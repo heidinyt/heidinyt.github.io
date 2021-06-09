@@ -1,7 +1,13 @@
+html, body {
+    height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
 }
   
 main {
@@ -16,6 +22,46 @@ h1 {
     max-width: 80%;
     font-family: karnak-display;
     font-weight: normal;
+}
+
+.carousel {
+    display:flex;
+    width:460px;
+
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.carousel::-webkit-scrollbar {
+    width: 7px;
+    height: 15px;
+}
+.carousel::-webkit-scrollbar-thumb {
+    background: black;
+}
+.carousel::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.carousel > div {
+    background: rgb(101, 142, 255);
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+
+    display: flex;
+    flex-shrink: 0;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 70px; 
+
+    scroll-snap-align: start;
+    transform-origin: center;
+    transition: transform 0.5s;
 }
 
 /* mobile layout */
