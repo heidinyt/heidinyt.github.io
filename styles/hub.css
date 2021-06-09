@@ -69,4 +69,8 @@ h1 {
     h1 {
         font-size: 40px;
     }
+
+    .carousel {
+       width: 90vw;
+    }
 }
