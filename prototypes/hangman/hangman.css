@@ -1,0 +1,52 @@
+main {
+    margin: .5em auto;
+    font-family: karnak-display;
+}
+
+#new-game-button {
+    background: #e64843;
+    border: 1px solid #e64843;
+    border-radius: 6px;
+    box-shadow: 1px 1px 2px rgb(192, 192, 192);
+    color: #fff;
+    padding: 6px 14px;
+    outline: 0;
+    display: block;
+    margin: auto;
+}
+
+#currentWord {
+    text-align: center;
+    margin-top: 12px;
+}
+
+#currentWord span {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#letters {
+    color: #999;
+    letter-spacing: 5px;
+    margin: 20px auto 0;
+    text-align: center;
+    width: 400px;
+}
+
+#you-win-message,
+#you-lose-message {
+  font-family: karnak-display;
+  background: #9fff97;
+  padding: 10px;
+  margin: 30px auto 0;
+  text-align: center;
+  width: 300px;
+}
+
+#you-lose-message {
+  background: #e64843;
+}
+
+.hide {
+    display: none;
+}

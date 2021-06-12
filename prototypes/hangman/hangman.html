@@ -1,0 +1,33 @@
+​<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="../../styles/hub.css">
+    <link rel="stylesheet" href="../../styles/fonts.css">
+    <link rel="stylesheet" href="hangman.css">
+</head>
+
+<body>
+    <main>
+        <h1>Hangman</h1>
+        <button id="new-game-button" >
+            New Game
+        </button>
+        <div id="game" class="hide">
+            <div id="currentWord"></div>
+        </div>
+        <div id="letters">
+            
+        </div>
+        <div id="you-win-message" class="hide">
+            <p>Congrats; you win!</p>
+          </div>
+        <div id="you-lose-message" class="hide">
+        <p>Game over :(</p>
+        </div>
+    </main>
+    <script src="hangman.js"></script>
+    <script src="application.js"></script>
+    </body>
+</html>
