@@ -4,6 +4,12 @@ main {
     font-size: 30px;
 }
 
+#inputTest {
+    display: block;
+    margin: auto;
+    height: 40px;
+}
+
 #new-game-button {
     background: #e64843;
     border: 1px solid #e64843;

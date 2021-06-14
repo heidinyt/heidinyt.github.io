@@ -11,6 +11,10 @@ var _initializeControls = function () {
     document.getElementById("you-lose-message").classList = "hide";
     document.getElementById("game").classList = "";
     document.getElementById("letters").innerHTML = "";
+    // document.getEle"click", function() {
+    //     $('#inputTest').focus();
+    //   });
+    //   $('#inputTest').focus();
 };
 
 var _addLetter = function (letterToAdd) {
