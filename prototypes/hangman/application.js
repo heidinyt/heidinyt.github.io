@@ -11,7 +11,11 @@ var _initializeControls = function () {
     document.getElementById("you-lose-message").classList = "hide";
     document.getElementById("game").classList = "";
     document.getElementById("letters").innerHTML = "";
-  };
+};
+
+var _addLetter = function (letterToAdd) {
+    document.getElementById("letters").innerHTML = document.getElementById("letters").innerHTML + letterToAdd;
+};
 
 var resetCurrentWord = function () {
     var word = document.getElementById("currentWord");
@@ -46,7 +50,7 @@ var insertLetter = function (event) {
     var correct = hangman.guessLetter(letterPressed);
 
     if (correct !== undefined && !correct) {
-        // _addLetter(letterPressed);
+        _addLetter(letterPressed);
         // drawHangman(); // TODO
     } else {
         drawCurrentWord();
