@@ -1,5 +1,5 @@
 var hangman;
-var input = document.getElementById("inputTest");
+var input = document.getElementById("inputBox");
 
 var newGameClick = function () {
     _initializeControls();
@@ -12,7 +12,8 @@ var _initializeControls = function () {
     document.getElementById("you-lose-message").classList = "hide";
     document.getElementById("game").classList = "";
     document.getElementById("letters").innerHTML = "";
-    document.getElementById("inputTest").focus();
+    document.getElementById("inputBox").focus();
+    input.value = '';
 };
 
 var _addLetter = function (letterToAdd) {
@@ -101,6 +102,9 @@ input.addEventListener("keyup", function(event) {
       insertLetterUsingInputKeyboard(); 
     }
   });
+
+  window.onLoad = newGameClick();
+
 
 document.getElementById("new-game-button").addEventListener("click", newGameClick);
 

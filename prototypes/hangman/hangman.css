@@ -4,8 +4,8 @@ main {
     font-size: 30px;
 }
 
-#inputTest {
-    display: block;
+#inputBox {
+    display: none;
     margin: auto;
     height: 40px;
 }
@@ -64,4 +64,13 @@ main {
 
 .hide {
     display: none;
+}
+
+/* mobile layout */
+@media screen and (max-width: 768px) {
+    #inputBox {
+        display: block;
+        margin: auto;
+        height: 40px;
+    }
 }
