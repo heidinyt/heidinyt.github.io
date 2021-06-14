@@ -1,6 +1,7 @@
 main {
     margin: .5em auto;
     font-family: karnak-display;
+    font-size: 30px;
 }
 
 #new-game-button {
@@ -9,10 +10,18 @@ main {
     border-radius: 6px;
     box-shadow: 1px 1px 2px rgb(192, 192, 192);
     color: #fff;
-    padding: 6px 14px;
+    padding: 10px 14px;
     outline: 0;
     display: block;
-    margin: auto;
+    font-size: 20px;
+    margin: 20px auto;
+}
+
+#hangmanImg {
+    max-width: 70vw;
+    max-height: 50vw;
+    display: block;
+    margin: auto auto 20px auto;
 }
 
 #currentWord {
@@ -36,8 +45,8 @@ main {
 #you-win-message,
 #you-lose-message {
   font-family: karnak-display;
-  background: #9fff97;
-  padding: 10px;
+  background: #7fff35;
+  padding: 20px;
   margin: 30px auto 0;
   text-align: center;
   width: 300px;

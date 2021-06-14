@@ -40,18 +40,21 @@ var drawCurrentWord = function (word) {
     });
 };
 
+var drawHangman = function () {
+    document.getElementById("hangmanImg").src = "images/wire" + (5-hangman.incorrectGuessesLeft) + ".PNG";
+}
+
 var insertLetter = function (event) {
     if (event.keyCode < 65 || event.keyCode > 90) // make sure letter key
     return;
 
-    console.log("letter pressed");
     // check if letter is in answer?
     var letterPressed  = String.fromCharCode(event.keyCode);
     var correct = hangman.guessLetter(letterPressed);
 
     if (correct !== undefined && !correct) {
         _addLetter(letterPressed);
-        // drawHangman(); // TODO
+        drawHangman(); 
     } else {
         drawCurrentWord();
     }
