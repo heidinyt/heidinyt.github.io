@@ -1,4 +1,5 @@
 var hangman;
+var input = document.getElementById("inputTest");
 
 var newGameClick = function () {
     _initializeControls();
@@ -11,10 +12,7 @@ var _initializeControls = function () {
     document.getElementById("you-lose-message").classList = "hide";
     document.getElementById("game").classList = "";
     document.getElementById("letters").innerHTML = "";
-    // document.getEle"click", function() {
-    //     $('#inputTest').focus();
-    //   });
-    //   $('#inputTest').focus();
+    document.getElementById("inputTest").focus();
 };
 
 var _addLetter = function (letterToAdd) {
@@ -54,16 +52,28 @@ var insertLetter = function (event) {
 
     // check if letter is in answer?
     var letterPressed  = String.fromCharCode(event.keyCode);
-    var correct = hangman.guessLetter(letterPressed);
+    makeGuess(letterPressed);
+};
+
+var makeGuess = function (letter) {
+    var correct = hangman.guessLetter(letter);
 
     if (correct !== undefined && !correct) {
-        _addLetter(letterPressed);
+        _addLetter(letter);
         drawHangman(); 
     } else {
         drawCurrentWord();
     }
 
     afterEachGuess();
+}
+
+var insertLetterUsingInputKeyboard = function () {
+    console.log("input.value" + input.value);
+    for (var i = 0; i < input.value.length; i++) {
+        makeGuess(input.value.charAt(i))
+    }
+    input.value = '';
 };
 
 var afterEachGuess = function () {
@@ -83,6 +93,14 @@ var afterEachGuess = function () {
 };
 
 document.addEventListener("keydown", insertLetter);
+
+input.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+      // cancel default action, if needed
+      event.preventDefault();
+      insertLetterUsingInputKeyboard(); 
+    }
+  });
 
 document.getElementById("new-game-button").addEventListener("click", newGameClick);
 
