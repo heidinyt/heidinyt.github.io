@@ -17,7 +17,6 @@ Hangman.prototype._chooseAnswer = function () {
 // return undefined if letter already inserted, true if letter in answer, false if not
 Hangman.prototype.guessLetter = function (letter) {
     letter = letter.toUpperCase();
-    console.log("letter guessed: "+ letter); //COME BACK HERE
     if (this.letters.indexOf(letter) > -1) {
       return;
     }
@@ -26,7 +25,6 @@ Hangman.prototype.guessLetter = function (letter) {
     var correct = this.answer.indexOf(letter) > -1;
   
     if (!correct) {
-      console.log("incorrect");
       this.incorrectGuessesLeft -= 1;
     }
     return correct;

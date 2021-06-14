@@ -57,6 +57,7 @@ var insertLetter = function (event) {
 };
 
 var makeGuess = function (letter) {
+    letter = letter.toUpperCase();
     var correct = hangman.guessLetter(letter);
 
     if (correct !== undefined && !correct) {
@@ -70,7 +71,6 @@ var makeGuess = function (letter) {
 }
 
 var insertLetterUsingInputKeyboard = function () {
-    console.log("input.value" + input.value);
     for (var i = 0; i < input.value.length; i++) {
         makeGuess(input.value.charAt(i))
     }
