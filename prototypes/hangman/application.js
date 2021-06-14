@@ -5,6 +5,7 @@ var newGameClick = function () {
     _initializeControls();
     hangman = new Hangman();
     drawCurrentWord();
+    drawHangman();
 };
 
 var _initializeControls = function () {
@@ -51,7 +52,6 @@ var insertLetter = function (event) {
     if (event.keyCode < 65 || event.keyCode > 90) // make sure letter key
     return;
 
-    // check if letter is in answer?
     var letterPressed  = String.fromCharCode(event.keyCode);
     makeGuess(letterPressed);
 };
@@ -103,8 +103,7 @@ input.addEventListener("keyup", function(event) {
     }
   });
 
-  window.onLoad = newGameClick();
-
+window.onLoad = newGameClick();
 
 document.getElementById("new-game-button").addEventListener("click", newGameClick);
 
