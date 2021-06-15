@@ -6,7 +6,7 @@ main {
 
 #inputBox {
     display: block;
-    margin: auto;
+    margin: 10px auto;
     height: 40px;
 }
 
