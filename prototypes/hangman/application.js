@@ -78,6 +78,7 @@ var insertLetterUsingInputKeyboard = function () {
 };
 
 var afterEachGuess = function () {
+    input.value = ''; // clear input when text submitted
     var status = hangman.gameStatus();
   
     if (!status)
