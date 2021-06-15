@@ -2,7 +2,7 @@ var answer;
 
 function Hangman () {
     this.possibleWords = ["ZOE", "BEEATRICE", "EVERDEEN", "JONATHAN", "PIZZA"];
-    this.answer = "hi";
+    this.answer = "";
     this.letters = []; // guesses player has already made
     this.incorrectGuessesLeft = 5;
 

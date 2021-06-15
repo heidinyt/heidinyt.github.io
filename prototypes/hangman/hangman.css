@@ -19,13 +19,13 @@ main {
     padding: 10px 14px;
     outline: 0;
     display: block;
-    font-size: 20px;
+    font-size: 30px;
     margin: 20px auto;
 }
 
 #hangmanImg {
-    max-width: 70vw;
-    max-height: 50vw;
+    max-width: 30em;
+    max-height: 20em;
     display: block;
     margin: auto auto 20px auto;
 }
@@ -33,6 +33,7 @@ main {
 #currentWord {
     text-align: center;
     margin-top: 12px;
+    font-size: 80px;
 }
 
 #currentWord span {
@@ -72,5 +73,20 @@ main {
         display: block;
         margin: auto;
         height: 40px;
+    }
+
+    #hangmanImg {
+        max-width: 70vw;
+        max-height: 50vw;
+        display: block;
+        margin: auto auto 20px auto;
+    }
+
+    #currentWord {
+        font-size: 20px;
+    }
+
+    #new-game-button {
+        font-size: 20px;
     }
 }
