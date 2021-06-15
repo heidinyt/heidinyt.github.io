@@ -55,14 +55,16 @@ button{
 
 #alphabet li {
     float:left;
-    background-color: rgb(187, 187, 187);
-    margin: 10px;
+    background-color: #e64843;
+    margin: 7px;
     list-style:none;
-    width:28px;
-    height:30px;
+    width:25px;
+    height:25px;
+    line-height: 20px;
     padding:10px;
     cursor:pointer;
     text-justify: center;
+    text-align: center;
     border: none 1px;
 }
 
