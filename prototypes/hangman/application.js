@@ -13,7 +13,7 @@ var _initializeControls = function () {
     document.getElementById("you-lose-message").classList = "hide";
     document.getElementById("game").classList = "";
     document.getElementById("letters").innerHTML = "";
-    document.getElementById("inputBox").focus();
+    // document.getElementById("inputBox").focus();
     input.value = '';
 };
 
@@ -48,6 +48,8 @@ var drawHangman = function () {
     document.getElementById("hangmanImg").src = "images/wire" + (5-hangman.incorrectGuessesLeft) + ".PNG";
 }
 
+// insertLetter funtion no longer being used. 
+// was used to make guess on desktop without need for input field
 var insertLetter = function (event) {
     if (event.keyCode < 65 || event.keyCode > 90) // make sure letter key
     return;
@@ -73,6 +75,7 @@ var makeGuess = function (letter) {
 var insertLetterUsingInputKeyboard = function () {
     for (var i = 0; i < input.value.length; i++) {
         makeGuess(input.value.charAt(i))
+        console.log("lengtttth " + input.value.toString());
     }
     input.value = '';
 };
@@ -107,4 +110,3 @@ input.addEventListener("keyup", function(event) {
 window.onLoad = newGameClick();
 
 document.getElementById("new-game-button").addEventListener("click", newGameClick);
-

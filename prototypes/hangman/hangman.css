@@ -5,7 +5,7 @@ main {
 }
 
 #inputBox {
-    display: none;
+    display: block;
     margin: auto;
     height: 40px;
 }
@@ -69,11 +69,6 @@ main {
 
 /* mobile layout */
 @media screen and (max-width: 768px) {
-    #inputBox {
-        display: block;
-        margin: auto;
-        height: 40px;
-    }
 
     #hangmanImg {
         max-width: 70vw;
