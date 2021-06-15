@@ -53,6 +53,11 @@ button{
     cursor:pointer;
 }
 
+#buttons {
+    margin: -20px auto;
+    display: block;
+}
+
 #alphabet li {
     float:left;
     background-color: #e64843;
