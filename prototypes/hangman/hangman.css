@@ -5,7 +5,7 @@ main {
 }
 
 #inputBox {
-    display: block;
+    display: none;
     margin: 10px auto;
     height: 40px;
 }
@@ -47,6 +47,23 @@ main {
     margin: 20px auto 0;
     text-align: center;
     width: 400px;
+}
+
+button{
+    cursor:pointer;
+}
+
+#alphabet li {
+    float:left;
+    background-color: rgb(187, 187, 187);
+    margin: 10px;
+    list-style:none;
+    width:28px;
+    height:30px;
+    padding:10px;
+    cursor:pointer;
+    text-justify: center;
+    border: none 1px;
 }
 
 #you-win-message,

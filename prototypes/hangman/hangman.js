@@ -46,7 +46,7 @@ Hangman.prototype.getCurrentWordStatus = function () {
               currentWordStatus.push("_");
             }
         }
-         ) } 
+        ) } 
     ;
 
     return currentWordStatus;
